@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Batsman",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium",
+    "price": 95,
+    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "price": 92,
+    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Slow left-arm orthodox",
+    "price": 88,
+    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast-medium",
+    "price": 90,
+    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Mitchell Starc",
+    "country": "Australia",
+    "role": "Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm fast",
+    "price": 85,
+    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "role": "Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak googly",
+    "price": 83,
+    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+  }
+]

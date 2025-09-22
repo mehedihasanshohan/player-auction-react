@@ -1,0 +1,20 @@
+import React, { use } from 'react'
+import Player from './Player';
+
+const Available = ({playersPromise}) => {
+
+  const players = use(playersPromise)
+  console.log(players);
+
+  return (
+    <>
+    <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
+      {
+        players.map(player => <Player player={player} key={player.id}></Player>)
+      }
+      </div>
+    </>
+  )
+}
+
+export default Available

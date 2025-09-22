@@ -1,62 +1,110 @@
 [
   {
-    "id": 1,
+    "id": "P1001",
     "name": "Virat Kohli",
     "country": "India",
-    "role": "Batsman",
-    "battingStyle": "Right-hand bat",
-    "bowlingStyle": "Right-arm medium",
-    "price": 95,
-    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+    "role": "All-Rounder",
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1500,
+    "image": "https://i.ibb.co.com/6JZ6ZmJC/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.webp"
   },
   {
-    "id": 2,
-    "name": "Babar Azam",
-    "country": "Pakistan",
+    "id": "P1002",
+    "name": "Rohit Sharma",
+    "country": "India",
     "role": "Batsman",
-    "battingStyle": "Right-hand bat",
-    "bowlingStyle": "Right-arm offbreak",
-    "price": 92,
-    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1200,
+    "image": "https://i.ibb.co.com/392VSmkm/AP24181627405894-1720424614.webp"
   },
   {
-    "id": 3,
+    "id": "P1003",
     "name": "Shakib Al Hasan",
     "country": "Bangladesh",
     "role": "All-Rounder",
-    "battingStyle": "Left-hand bat",
-    "bowlingStyle": "Slow left-arm orthodox",
-    "price": 88,
-    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1300,
+    "image": "https://i.ibb.co.com/XfhPkDh3/images.jpg"
   },
   {
-    "id": 4,
+    "id": "P1004",
+    "name": "Tamim Iqbal",
+    "country": "Bangladesh",
+    "role": "Batsman",
+    "battingStyle": "Left-Hand-Bat",
+    "price": 800,
+    "image": "https://i.ibb.co.com/FLKB09Tg/tamim-iqbal.jpg"
+  },
+  {
+    "id": "P1005",
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1400,
+    "image": "https://i.ibb.co.com/GB8GCLp/000-32-ND3-AU.webp"
+  },
+  {
+    "id": "P1006",
+    "name": "Shaheen Afridi",
+    "country": "Pakistan",
+    "role": "Bowler",
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1000,
+    "image": "https://i.ibb.co.com/1JbdVLJg/CRICKET-ASIA-2025-T20-IND-PAK-49-1758079692838-1758079715842.jpg"
+  },
+  {
+    "id": "P1007",
+    "name": "David Warner",
+    "country": "Australia",
+    "role": "Batsman",
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1100,
+    "image": "https://i.ibb.co.com/HTP8hHTB/skysports-david-warner-australia-5562949.jpg"
+  },
+  {
+    "id": "P1008",
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "role": "Bowler",
+    "battingStyle": "Right-Hand-Bat",
+    "price": 950,
+    "image": "https://i.ibb.co.com/Dfsxv0n5/13e071c0-e3a5-11ef-8450-ff58a15d40df.jpg"
+  },
+  {
+    "id": "P1009",
+    "name": "Joe Root",
+    "country": "England",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1150,
+    "image": "https://i.ibb.co.com/RTnP58n1/2025-07-25-T162623-Z-866326960-UP1-EL7-P19-NXBZ-RTRMADP-3-CRICKET-TEST-ENG-IND-1753470930.webp"
+  },
+  {
+    "id": "P1010",
     "name": "Ben Stokes",
     "country": "England",
     "role": "All-Rounder",
-    "battingStyle": "Left-hand bat",
-    "bowlingStyle": "Right-arm fast-medium",
-    "price": 90,
-    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1250,
+    "image": "https://i.ibb.co.com/ccLjYCZy/bc3942b97709635c01bb88d261840ab2-Y29ud-GVud-HNl-YXJja-GFwa-Swx-Nz-Qw-NTY0-MDI3-2-78466672.jpg"
   },
   {
-    "id": 5,
-    "name": "Mitchell Starc",
-    "country": "Australia",
-    "role": "Bowler",
-    "battingStyle": "Left-hand bat",
-    "bowlingStyle": "Left-arm fast",
-    "price": 85,
-    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+    "id": "P1011",
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1180,
+    "image": "https://i.ibb.co.com/BHm6w2h0/kane-Williamson-780x470.webp"
   },
   {
-    "id": 6,
-    "name": "Rashid Khan",
-    "country": "Afghanistan",
+    "id": "P1012",
+    "name": "Trent Boult",
+    "country": "New Zealand",
     "role": "Bowler",
-    "battingStyle": "Right-hand bat",
-    "bowlingStyle": "Right-arm legbreak googly",
-    "price": 83,
-    "image": "https://i.ibb.co.com/zjqhSMh/1639653702522-2.jpg"
+    "battingStyle": "Right-Hand-Bat",
+    "price": 900,
+    "image": "https://i.ibb.co.com/RTJQCvfV/l77420231014004651.jpg"
   }
 ]

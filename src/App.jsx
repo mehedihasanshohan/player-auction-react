@@ -12,9 +12,9 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <Banner></Banner>
-      <Suspense>
+      {/* <Navbar></Navbar> */}
+      {/* <Banner></Banner> */}
+      <Suspense fallback={ <span className='loading loading-spinner text-2xl'></span>}>
         <Available playersPromise={playersPromise}></Available>
       </Suspense>
     </>

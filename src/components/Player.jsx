@@ -1,13 +1,24 @@
-import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { MdSportsCricket } from 'react-icons/md';
-import { AiFillDollarCircle } from 'react-icons/ai';
 import { GiBilledCap } from 'react-icons/gi';
 import { FaDollarSign } from 'react-icons/fa';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
+
+
+const countryFlags = {
+  Bangladesh: "https://flagcdn.com/w20/bd.png",
+  India: "https://flagcdn.com/w20/in.png",
+  Australia: "https://flagcdn.com/w20/au.png",
+  England: "https://flagcdn.com/w20/gb-eng.png",
+  Pakistan: "https://flagcdn.com/w20/pk.png",
+  SouthAfrica: "https://flagcdn.com/w20/za.png",
+};
+
 
 const Player = ({ player }) => {
-  const { name, country, battingStyle, role, image, price } = player;
+  const { name, country, battingStyle, role, image, price} = player;
 
   return (
     <div className=" bg-gray-900 p-4 text-white rounded-xl shadow-xl overflow-hidden transform hover:scale-101 transition-transform duration-300">
@@ -21,10 +32,20 @@ const Player = ({ player }) => {
           <FaUser></FaUser>
           <h2 className="text-xl font-bold">{name}</h2>
         </div>
+
+        {/* Country with flag tooltip */}
         <div className="flex items-center space-x-2">
-          <FaMapMarkerAlt></FaMapMarkerAlt>
-          <p className="text-gray-300"> {country}</p>
+          <FaMapMarkerAlt />
+          <p
+            data-tooltip-id={`countryTooltip-${name}`}
+            data-tooltip-html={`<img src="${countryFlags[country]}" alt="${country}" style="width:20px;height:15px;display:inline-block;margin-right:5px;" /> ${country}`}
+            className="text-gray-300 cursor-pointer"
+          >
+            {country}
+          </p>
+          <Tooltip id={`countryTooltip-${name}`} place="top" html />
         </div>
+
         <div className="flex items-center space-x-2">
           <GiBilledCap></GiBilledCap>
           <p className="text-gray-300"> {role}</p>
@@ -35,9 +56,16 @@ const Player = ({ player }) => {
         </div>
         <div className="flex items-center space-x-2 mt-2">
           <FaDollarSign></FaDollarSign>
-          <span className="inline-block bg-rose-400 text-white font-semibold px-3 py-1 rounded-full">
-            {price}K
-          </span>
+           <button
+            className="bg-gradient-to-r from-rose-500 to-pink-500
+                       text-white font-semibold px-4 py-1.5
+                       rounded-full shadow-md hover:from-rose-600
+                       hover:to-pink-600 transition-all duration-300
+                       hover:scale-105 cursor-pointer"
+          >
+            {price} K
+          </button>
+
         </div>
       </div>
     </div>

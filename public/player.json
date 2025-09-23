@@ -6,8 +6,21 @@
     "role": "All-Rounder",
     "battingStyle": "Right-Hand-Bat",
     "price": 1500,
-    "image": "https://i.ibb.co.com/6JZ6ZmJC/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.webp"
+    "image": "https://i.ibb.co.com/6JZ6ZmJC/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.webp",
+    "stats": {
+    "batting": [
+      { "format": "Test", "matches": 111, "runs": 8848, "avg": 49.1 },
+      { "format": "ODI", "matches": 292, "runs": 13848, "avg": 57.3 },
+      { "format": "T20", "matches": 115, "runs": 4008, "avg": 52.7 }
+    ],
+    "bowling": [
+      { "format": "Test", "matches": 11, "wickets": 0, "econ": 3.4 },
+      { "format": "ODI", "matches": 12, "wickets": 4, "econ": 5.2 },
+      { "format": "T20", "matches": 6, "wickets": 2, "econ": 8.1 }
+    ]
+  }
   },
+
   {
     "id": "P1002",
     "name": "Rohit Sharma",

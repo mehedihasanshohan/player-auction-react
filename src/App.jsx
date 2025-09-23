@@ -20,8 +20,8 @@ function App() {
         <h1 className='text-2xl text-gray-500 font-semibold'>Available Players</h1>
 
         <div>
-          <button onClick={() => setAvailable(true)} className='btn btn-accent rounded-l-2xl'>Available</button>
-          <button onClick={() => setAvailable(false)} className='btn btn-info rounded-r-2xl'>Selected <span>0</span> </button>
+          <button onClick={() => setAvailable(true)} className={`btn btn-accent rounded-l-2xl ${available === true? "underline underline-offset-4 decoration-2 decoration-blue-700" : "no-underline"}`}>Available</button>
+          <button onClick={() => setAvailable(false)} className={`btn btn-info rounded-r-2xl ${available === !true ? "underline underline-offset-4 decoration-2 decoration-blue-700" : "no-underline"}`}>Selected <span>0</span> </button>
         </div>
       </div>
       {

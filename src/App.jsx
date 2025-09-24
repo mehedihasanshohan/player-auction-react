@@ -5,16 +5,17 @@ import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Selected from './components/Selected'
 
-function App() {
-  const [available, setAvailable] = useState(true)
-
-  const playersPromise =  fetch('/player.json')
+const playersPromise =  fetch('/player.json')
     .then(res => res.json())
     .catch(err => console.log(err))
 
+function App() {
+  const [available, setAvailable] = useState(true)
+  const [availableBalance, setAvailableBalance] = useState(10000);
+
   return (
     <>
-      {/* <Navbar></Navbar> */}
+      <Navbar availableBalance={availableBalance}></Navbar>
       {/* <Banner></Banner> */}
       <div className='flex justify-between items-center max-w-6xl mx-auto p-4'>
         <h1 className='text-2xl text-gray-500 font-semibold'>Available Players</h1>
@@ -25,8 +26,12 @@ function App() {
         </div>
       </div>
       {
-        available === true ?   <Suspense fallback={ <span className='loading loading-spinner text-2xl'></span>}>
-                                  <Available playersPromise={playersPromise}></Available>
+        available === true ?   <Suspense fallback={ <h2>loading... </h2>}>
+                                  <Available
+                                    availableBalance={availableBalance}
+                                    setAvailableBalance={setAvailableBalance}
+                                    playersPromise={playersPromise}>
+                                  </Available>
                               </Suspense> : <Selected></Selected>
       }
 

@@ -5,7 +5,7 @@ import { GiBilledCap } from 'react-icons/gi';
 import { FaDollarSign } from 'react-icons/fa';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-
+import { useState } from 'react';
 
 const countryFlags = {
   Bangladesh: "https://flagcdn.com/w20/bd.png",
@@ -17,7 +17,9 @@ const countryFlags = {
 };
 
 
-const Player = ({ player }) => {
+const Player = ({ player, availableBalance,  setAvailableBalance }) => {
+  const [isSelected, setIsSelected] = useState(false);
+
   const { name, country, battingStyle, role, image, price} = player;
 
   return (
@@ -55,17 +57,35 @@ const Player = ({ player }) => {
           <p className="text-gray-300">{battingStyle}</p>
         </div>
         <div className="flex items-center space-x-2 mt-2">
-          <FaDollarSign></FaDollarSign>
+          {/* <FaDollarSign></FaDollarSign> */}
            <button
-            className="bg-gradient-to-r from-rose-500 to-pink-500
-                       text-white font-semibold px-4 py-1.5
-                       rounded-full shadow-md hover:from-rose-600
-                       hover:to-pink-600 transition-all duration-300
-                       hover:scale-105 cursor-pointer"
+            className="bg-gradient-to-r from-purple-500 to-rose-500
+                       text-white font-semibold px-4 py-1
+                       rounded-full shadow-md hover:from-rose-500
+                       hover:to-purple-500 transition-all duration-300
+                       cursor-pointer"
           >
-            {price} K
+            ${price} K
           </button>
-
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              if(availableBalance < price && !isSelected){
+                alert("Insufficient balance to select this player.");
+                return;
+              }
+            setIsSelected(!isSelected)
+            setAvailableBalance(availableBalance - price);
+          }}
+            className="bg-gradient-to-r from-blue-500 to-blue-900
+                       text-white font-semibold px-4 py-1
+                       rounded-full shadow-md hover:from-blue-900
+                       hover:to-blue-500 transition-all duration-300
+                        cursor-pointer"
+          >
+            {isSelected ? 'Selected' : 'Choose Player'}
+          </button>
         </div>
       </div>
     </div>

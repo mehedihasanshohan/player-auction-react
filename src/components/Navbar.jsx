@@ -1,11 +1,11 @@
 import React from 'react'
 import img from '../../public/assets/logo.png';
+import { FaCoins } from 'react-icons/fa';
 
-
-const Navbar = () => {
+const Navbar = ({availableBalance}) => {
   return (
     <>
-      <div className="max-w-6xl mx-auto navbar bg-white text-black font-medium">
+      <div className="max-w-6xl mx-auto navbar sticky top-0 bg-white text-black font-medium">
         <div className="navbar-start">
           <div className="dropdown">
             <ul
@@ -28,7 +28,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className='btn btn-info'><span>0</span> Coins</button>
+          <button className='btn btn-info text-black'><span className=''>${availableBalance}</span>K <FaCoins className='text-orange-800'></FaCoins></button>
         </div>
       </div>
     </>

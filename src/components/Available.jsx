@@ -1,10 +1,10 @@
 import React, { use } from 'react'
 import Player from './Player';
 
-const Available = ({playersPromise, availableBalance, setAvailableBalance}) => {
+const Available = ({playersPromise, availableBalance, setAvailableBalance, selectedPlayers, setSelectedPlayers}) => {
 
   const players = use(playersPromise)
-  console.log(players);
+  // console.log(players);
 
   return (
     <>
@@ -14,6 +14,8 @@ const Available = ({playersPromise, availableBalance, setAvailableBalance}) => {
             <Player
               availableBalance={availableBalance}
               setAvailableBalance={setAvailableBalance}
+              selectedPlayers={selectedPlayers}
+              setSelectedPlayers={setSelectedPlayers}
               player={player}
               key={player.id}>
             </Player>)

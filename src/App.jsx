@@ -12,6 +12,14 @@ const playersPromise =  fetch('/player.json')
 function App() {
   const [available, setAvailable] = useState(true)
   const [availableBalance, setAvailableBalance] = useState(10000);
+  const [selectedPlayers, setSelectedPlayers] = useState([])
+  // console.log(selectedPlayers);
+
+  const deletePlayer = (player) => {
+    const remaining = selectedPlayers.filter(p => p.id !== player.id)
+    setSelectedPlayers(remaining)
+    setAvailableBalance(availableBalance + player.price)
+  }
 
   return (
     <>
@@ -22,7 +30,7 @@ function App() {
 
         <div>
           <button onClick={() => setAvailable(true)} className={`btn btn-accent rounded-l-2xl ${available === true? "underline underline-offset-4 decoration-2 decoration-blue-700" : "no-underline"}`}>Available</button>
-          <button onClick={() => setAvailable(false)} className={`btn btn-info rounded-r-2xl ${available === !true ? "underline underline-offset-4 decoration-2 decoration-blue-700" : "no-underline"}`}>Selected <span>0</span> </button>
+          <button onClick={() => setAvailable(false)} className={`btn btn-info rounded-r-2xl ${available === !true ? "underline underline-offset-4 decoration-2 decoration-blue-700" : "no-underline"}`}>Selected </button>
         </div>
       </div>
       {
@@ -30,9 +38,18 @@ function App() {
                                   <Available
                                     availableBalance={availableBalance}
                                     setAvailableBalance={setAvailableBalance}
-                                    playersPromise={playersPromise}>
+                                    playersPromise={playersPromise}
+                                    selectedPlayers={selectedPlayers}
+                                    setSelectedPlayers={setSelectedPlayers}
+                                  >
                                   </Available>
-                              </Suspense> : <Selected></Selected>
+                              </Suspense> :
+                                  <Selected
+                                    selectedPlayers={selectedPlayers}
+                                    setSelectedPlayers={setSelectedPlayers}
+                                    deletePlayer={deletePlayer}
+                                  >
+                                  </Selected>
       }
 
     </>

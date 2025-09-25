@@ -17,13 +17,13 @@ const countryFlags = {
 };
 
 
-const Player = ({ player, availableBalance,  setAvailableBalance }) => {
+const Player = ({ player, availableBalance,  setAvailableBalance, selectedPlayers, setSelectedPlayers }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const { name, country, battingStyle, role, image, price} = player;
 
   return (
-    <div className=" bg-gray-900 p-4 text-white rounded-xl shadow-xl overflow-hidden transform hover:scale-101 transition-transform duration-300">
+    <div className=" bg-gray-900 p-4 text-white rounded-xl shadow-xl overflow-hidden">
       <img
         src={image}
         alt={name}
@@ -77,6 +77,7 @@ const Player = ({ player, availableBalance,  setAvailableBalance }) => {
               }
             setIsSelected(!isSelected)
             setAvailableBalance(availableBalance - price);
+            setSelectedPlayers([...selectedPlayers, player]);
           }}
             className="bg-gradient-to-r from-blue-500 to-blue-900
                        text-white font-semibold px-4 py-1
